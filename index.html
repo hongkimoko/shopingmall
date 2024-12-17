@@ -4,33 +4,75 @@
         <title>쇼핑몰</title>
         <meta charset="utf-8">
         <style>
-            li {display: inline;margin: 20px;color:black;}
-            .Favorites {color: blue; text-decoration: underline;cursor: pointer;}
+            #Favorites {color: black; text-decoration:none;cursor: pointer;}
+            menu {background-color: rgb(179, 177, 177);
+                padding: 5px;
+                    
+                
+                
+                } 
+            menu li {
+                list-style: none; 
+                padding: 0px;
+                margin: 0px;
+                display: inline; 
+                
+                font-size: 15px;
+                color:black;
+                } 
+            li.top-bar a {
+                color: black; 
+                text-decoration-line: none;}    
 
+
+
+
+
+            .end-bar {
+                border-top:5px,black,solid ;
+                border-bottom: 5px,black,solid ;
+                background-color: rgb(180, 180, 180);
+                padding: 3px;
+            }
+            .end-bar div {
+                list-style: none; 
+                padding: 0px;
+                margin: auto;
+                display: inline;   
+                font-size: 13px;
+                color:black;
+                border-top:3px,black,solid ;
+                border-bottom: 3px black,solid ;
+
+            } 
+            .end-grid {
+                border: 5px,pink;
+                display: grid;
+                grid-template-columns: 150px,1fr,1fr,1fr;    
+            }   
+            .end-grid div {border: 3px, black, solid;}    
 
         </style>
     </head>
 
     <body>
+            <menu class="top-bar">
+                 <li class="top-bar" id="Favorites" onclick="showAlert()">즐겨찾기
+                    <script>
+                    function showAlert() {
+                       alert("Ctrl+D 키를 누르면 즐겨찾기에 추가하실 수 있습니다.");
+                       }
+                    </script></li>
+                <li id="join-us" class="top-bar"><a href="join-us.html">입점신청</a></li> 
+                <li id="cs-center" class="top-bar"><a href="cs-center.html">고객센터</a></li>
+                <li id="join" class="top-bar"><a href="join.html">회원가입</a></li>
+                <li id="login" class="top-bar"><a href="login.html">로그인 </a></li>
+            </menu> 
+
+      
         <p>
-            <h3>
-                <ul>
-                    <li><span class="Favorites" onclick="showAlert()">즐겨찾기</span>
-                        <script>
-                        function showAlert() {
-                            alert("Ctrl+D 키를 누르면 즐겨찾기에 추가하실 수 있습니다.");
-                             }
-                        </script></li>
-                    <li id="join-us" class="join-us"><a href="join-us.html">입점신청</a></li>    
-                    <li id="login" class="log"><a href="login.html">로그인 </a></li>
-                    <li id="join" class="join"><a href="join.html">회원가입</a></li>
-                    <li id="cs-center" class="cs-center"><a href="cs-center.html">고객센터</a></li>
-                </ul>
-            </h3>    
-        </p>
- 
-        <p>
-            <h2>
+           
+            <div class="second">
                 <ul>
                     <li>카테고리</li>
                     <li>우리쇼핑몰</li>
@@ -38,9 +80,51 @@
                     <li>마이페이지</li>
                     <li>장바구니</li>
                 </ul>
-            </h2>    
+            </div>    
         </p>
-    
+
+        <div class="end-bar">
+            <div>회사소개</div>
+            <div>investor Relations</div>        
+            <div>인재채용</div>    
+            <div>입점/제휴문의</div>
+            <div>공지사항</div>
+            <div>고객의 소리</div>
+            <div>이용약관</div>
+            <div>개인정보 처리방침</div>
+            <div>쿠팡페이 이용약관</div>
+            <div>신뢰관리센터</div>
+            <div>제휴마케팅</div>
+            <div>광고안내</div>
+
+        </div>
+
+        <div class="end-grid">
+            <div>쇼핑몰</div>
+            <div>
+                <li>상호명 및 호스팅서비스제공:쇼핑몰</li>
+                <li>대표이사:뿅뿅</li>
+                <li>서울시 어찌구 그대로 110</li>
+                <li>사업자등록번호:000-00-00000</li>
+                <li>통신판매업신고:2024-서울어찌찌-0000</li>
+                <li>사업자 정보 확인인</li>
+            </div>
+            <div>
+                <li>365고객센터/전자금융거래 분쟁처리 담당</li>
+                <li>1577-0000(유료)</li>
+                <li>서울시 어찌구 그대로 110</li>
+                <li>email: oooo@gmail.com</li>
+            </div>
+            <div>
+                우리은행 채무지급보증 안내
+                당사는 고객님이 현금 결제한 금액에 대해
+                우리은행과 채무지급보증 계약을 체결하여
+                안전거래를 보장하고 있습니다.
+                서비스 가입사실 확인 >
+            </div>
+        </div>
+
+     
     </body>
 
 
