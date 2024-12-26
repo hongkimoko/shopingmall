@@ -1,0 +1,132 @@
+/* 페이지 전체체 */
+body {
+  min-width: 1024px;
+  height: 100%;
+}
+#header {
+  height: auto;
+  background-color: cadetblue;
+  margin: 0 auto;
+  width: 1024px;
+}
+#body {
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  width: 1024px;
+}
+#footer {
+  height: 199px;
+  background-color: gold;
+  margin: 0 auto;
+  width: 1024px;
+}
+/* topbar */
+#Favorites {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.topbar {
+  background-color: beige;
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.topbar div {
+  padding: 0px;
+  margin: 0px;
+  font-size: 13px;
+  color: black;
+}
+.topbar a {
+  color: black;
+  text-decoration-line: none;
+}
+#Favorites {
+  display: inline;
+}
+#joinus {
+  display: inline;
+}
+#cscenter {
+  display: inline;
+}
+#join {
+  display: inline;
+}
+#login {
+  display: inline;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(8, 124.5px);
+  grid-template-rows: 64px 50px;
+  grid-gap: 4px;
+  grid-template-areas:
+    "a b b c c c d e"
+    "a f f f f f f f";
+  border: 1px solid red;
+}
+.main div {
+  border: 1px solid blue;
+}
+#mainbar1 {
+  grid-area: a;
+}
+#mainbar2 {
+  grid-area: b;
+}
+#mainbar3 {
+  grid-area: c;
+}
+#mainbar4 {
+  grid-area: d;
+}
+#mainbar5 {
+  grid-area: e;
+}
+#mainbar6 {
+  grid-area: f;
+}
+/* end-bar */
+.end-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  border-top: 5px, black, solid;
+  border-bottom: 5px, black, solid;
+  background-color: rgb(180, 180, 180);
+  padding: 3px;
+}
+.end-bar div {
+  list-style: none;
+  padding: 0px;
+  margin: auto;
+  display: flex;
+  font-size: 13px;
+  color: black;
+  border-top: 3px, black, solid;
+  border-bottom: 3px black, solid;
+}
+.end-company {
+  border: 5px, pink;
+  display: flex;
+}
+.end-company div {
+  border: 3px, black, solid;
+}
+.endlogo {
+  width: 256px;
+}
+.endinfo {
+  width: 256px;
+}
+.endadre {
+  width: 256px;
+}
+.endurib {
+  width: 256px;
+}

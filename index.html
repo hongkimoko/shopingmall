@@ -1,144 +1,101 @@
 <!DOCTYPE html>
-<hlml>
+<html>
     <head>
         <title>쇼핑몰</title>
+        <link href="index.css" type="text/css" rel="stylesheet" />
         <meta charset="utf-8">
-        <style>
-            #Favorites {color: black; text-decoration:none;cursor: pointer;}
-            .topbar {
-                background-color:beige;
-                padding: 5px;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-between;    
-                } 
-           
-            .topbar div {
-            
-                padding: 0px;
-                margin: 0px;
-                font-size: 13px;
-                color:black;
-                } 
-            .topbar a {
-                color: black; 
-                text-decoration-line: none;}
-            #Favorites {display: inline;}    
-            #joinus {display: inline;}
-            #cscenter {display: inline;}
-            #join {display: inline;}
-            #login {display: inline;} 
-
-
-
-
-            .end-bar {
-                display: flex;
-                flex-wrap: nowrap;
-                border-top:5px,black,solid ;
-                border-bottom: 5px,black,solid ;
-                background-color: rgb(180, 180, 180);
-                padding: 3px;
-            }
-            .end-bar div {
-                list-style: none; 
-                padding: 0px;
-                margin: auto;
-                display: inline;   
-                font-size: 13px;
-                color:black;
-                border-top:3px,black,solid ;
-                border-bottom: 3px black,solid ;
-
-            } 
-            .end-company {
-                border: 5px,pink;
-                display: flex;
-                justify-content: space-around;
-
-                grid-template-columns: 150px,1fr,1fr,1fr;    
-            }   
-            .end-company div {border: 3px, black, solid;}    
-                .endlogo {width: 100px;flex-grow: 1;}
-                .endinfo {width: 100px;flex-grow: 1;}
-                .endadre {width: 100px;flex-grow: 1;}
-                .endurib {width: 100px;flex-grow: 1;}
-        </style>
+        
     </head>
 
     <body>
-            <div class="topbar">
-                <div class="topbar-left">
-                    <div class="topbar" id="Favorites" onclick="showAlert()">즐겨찾기
-                        <script>
-                        function showAlert() {
-                        alert("Ctrl+D 키를 누르면 즐겨찾기에 추가하실 수 있습니다.");
-                        }
-                        </script></div>
-                    <div id="joinus" class="topbar"><a href="join-us.html">입점신청</a></div>
-                </div>     
-                <div class="topbar-right">
-                    <div id="cscenter" class="topbar"><a href="cs-center.html">고객센터</a></div>
-                    <div id="join" class="topbar"><a href="join.html">회원가입</a></div>
-                    <div id="login" class="topbar"><a href="login.html">로그인 </a></div>
+        <!-- 본문의 헤더 -->
+        <div id="header">
+                <div class="topbar">
+                    <div class="topbar-left">
+                        <div class="topbar" id="Favorites" onclick="showAlert()">즐겨찾기
+                            <script>
+                            function showAlert() {
+                            alert("Ctrl+D 키를 누르면 즐겨찾기에 추가하실 수 있습니다.");
+                            }
+                            </script></div>
+                        <div id="joinus" class="topbar"><a href="join-us.html">입점신청</a></div>
+                    </div>     
+                    <div class="topbar-right">
+                        <div id="cscenter" class="topbar"><a href="cs-center.html">고객센터</a></div>
+                        <div id="join" class="topbar"><a href="join.html">회원가입</a></div>
+                        <div id="login" class="topbar"><a href="login.html">로그인 </a></div>
+                    </div>    
+                </div> 
+
+        
+            <p>
+            
+                <div class="main">
+                    <div id="mainbar1">카테고리</div>
+                    <div id="mainbar2">우리쇼핑몰</div>
+                    <div id="mainbar3">검색창</div>
+                    <div id="mainbar4">마이페이지</div>
+                    <div id="mainbar5">장바구니</div>
+                    <div id="mainbar6">서비스카테고리</div>    
                 </div>    
-            </div> 
-
-      
-        <p>
-           
-            <div class="second">
-                <ul>
-                    <li>카테고리</li>
-                    <li>우리쇼핑몰</li>
-                    <li>검색창</li>
-                    <li>마이페이지</li>
-                    <li>장바구니</li>
-                </ul>
-            </div>    
-        </p>
-
-        <div class="end-bar">
-            <div>회사소개</div>
-            <div>investor Relations</div>        
-            <div>인재채용</div>    
-            <div>입점/제휴문의</div>
-            <div>공지사항</div>
-            <div>고객의 소리</div>
-            <div>이용약관</div>
-            <div>개인정보 처리방침</div>
-            <div>쿠팡페이 이용약관</div>
-            <div>신뢰관리센터</div>
-            <div>제휴마케팅</div>
-            <div>광고안내</div>
+            </p>
+        </div>
+       <!-- body -->
+        <div id="body">
+            <p>상품 판매 페이지</p>
+            <p>추천상품 페이지</p>
+            <p>할인상품 페이지</p>
+            <p>할인상품 페이지</p>
+            <p>할인상품 페이지</p>
+            <p>할인상품 페이지</p>
+            <p>할인상품 페이지</p>
+            <p>할인상품 페이지</p>
 
         </div>
+       
+        <!--본문의 하단바바  -->
+        <div id="footer">
+            <div class="end-bar">
+                <div>회사소개</div>
+                <div>investor Relations</div>        
+                <div>인재채용</div>    
+                <div>입점/제휴문의</div>
+                <div>공지사항</div>
+                <div>고객의 소리</div>
+                <div>이용약관</div>
+                <div>개인정보 처리방침</div>
+                <div>쿠팡페이 이용약관</div>
+                <div>신뢰관리센터</div>
+                <div>제휴마케팅</div>
+                <div>광고안내</div>
 
-        <div class="end-company">
-            <div class="end endlogo">쇼핑몰</div>
-            <div class="end endinfo">
-                <li>상호명 및 호스팅서비스제공:쇼핑몰</li>
-                <li>대표이사:뿅뿅</li>
-                <li>서울시 어찌구 그대로 110</li>
-                <li>사업자등록번호:000-00-00000</li>
-                <li>통신판매업신고:2024-서울어찌찌-0000</li>
-                <li>사업자 정보 확인인</li>
             </div>
-            <div class="end endadre">
-                <li>365고객센터/전자금융거래 분쟁처리 담당</li>
-                <li>1577-0000(유료)</li>
-                <li>서울시 어찌구 그대로 110</li>
-                <li>email: oooo@gmail.com</li>
-            </div>
-            <div class="end endurib">
-                우리은행 채무지급보증 안내
-                당사는 고객님이 현금 결제한 금액에 대해
-                우리은행과 채무지급보증 계약을 체결하여
-                안전거래를 보장하고 있습니다.
-                서비스 가입사실 확인 >
+
+            <div class="end-company">
+                <div class="end endlogo">쇼핑몰</div>
+                <div class="end endinfo">
+                    <li>상호명 및 호스팅서비스제공:쇼핑몰</li>
+                    <li>대표이사:뿅뿅</li>
+                    <li>서울시 어찌구 그대로 110</li>
+                    <li>사업자등록번호:000-00-00000</li>
+                    <li>통신판매업신고:2024-서울어찌찌-0000</li>
+                    <li>사업자 정보 확인인</li>
+                </div>
+                <div class="end endadre">
+                    <li>365고객센터/전자금융거래 분쟁처리 담당</li>
+                    <li>1577-0000(유료)</li>
+                    <li>서울시 어찌구 그대로 110</li>
+                    <li>email: oooo@gmail.com</li>
+                </div>
+                <div class="end endurib">
+                    우리은행 채무지급보증 안내
+                    당사는 고객님이 현금 결제한 금액에 대해
+                    우리은행과 채무지급보증 계약을 체결하여
+                    안전거래를 보장하고 있습니다.
+                    서비스 가입사실 확인 >
+                </div>
             </div>
         </div>
-
      
     </body>
 
@@ -159,4 +116,4 @@
 
 
 
-</hlml>
+</html>
