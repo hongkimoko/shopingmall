@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    
   </head>
 
   <body>
@@ -88,17 +89,12 @@
     <!-- body -->
     <div id="body">
       <img src="image\banner\banner1.jpg" alt="오픈이벤트베너" />
-      <p>상품 판매 페이지</p>
-      <p>추천상품 페이지</p>
-      <p>할인상품 페이지</p>
-      <p>할인상품 페이지</p>
-      <p>할인상품 페이지</p>
-      <p>할인상품 페이지</p>
-      <p>할인상품 페이지</p>
-      <p>할인상품 페이지</p>
+      <h2>상품 판매 페이지</h2>
+      <div id="product-list">
+        
     </div>
 
-    <!--본문의 하단바바  -->
+    <!--본문의 하단바  -->
     <div id="footer">
       <div class="end-bar">
         <div>회사소개</div>
@@ -139,4 +135,58 @@
       </div>
     </div>
   </body>
+    <script>
+      var products=[{
+        name: '경주여행',
+        price:100000,
+        seller:'성근',
+        imageUrl: 'image/product/Gyeongju.jpg'
+      },{
+        name:'제주여행',
+        price:150000,
+        seller:'송이',
+        imageUrl: 'image/product/jeju.jpg'
+      },{
+        name:'해운대여행',
+        price:80000,
+        seller:'재이',
+        imageUrl:'image/product/Haeundae.jpg'
+      },{
+        name:'전주여행',
+        price:50000,
+        seller:"키키",
+        imageUrl:'image/product/jeonju.jpg'
+      },{
+        name:'경복궁여행',
+        price:50000,
+        seller:"모모",
+        imageUrl:'image/product/Gyeongbokgung.jpg'
+      },{
+        name:'춘천여행',
+        price:75000,
+        seller:'코코',
+        imageUrl:'image/product/Chuncheon.jpg'
+      }];
+       let productshtml="";
+       for(var i=0;i<products.length;i++){
+       let product=products[i]
+        productshtml=productshtml+
+        '<div class="product-card">'+
+         ' <div>'+
+           ' <img class="product-image" src="'+product.imageUrl+'" />'+
+         ' </div>'+
+         ' <div class="product-content">'+
+           ' <span class="product-name">'+product.name+'</span>'+
+           ' <span class="product=price">'+product.price+'원</span>'+
+         ' </div>'+
+         ' <div class="product-seller">'+
+           ' <img class="product-avatar" src="image/icon/seller.jpg" />'+
+           ' <span>'+product.seller+'</span>'+
+         ' </div>'+
+       '</div>'
+      }
+      document.querySelector("#product-list").innerHTML=productshtml;
+      
+       
+    </script>
 </html>
