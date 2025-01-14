@@ -7,7 +7,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
-    />
+    /><!--구글 아이콘 서버 링크-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     
   </head>
 
@@ -39,6 +40,7 @@
 
       <div class="main">
         <div id="mainbar1">
+          <!-- 구글 마이페이지 아이콘 -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="100px"
@@ -49,11 +51,12 @@
             <path
               d="M105.87-105.87v-75.26H854.7v75.26H105.87Zm0-336.78v-75.26H854.7v75.26H105.87Zm0-336.78v-75.27H854.7v75.27H105.87Z"
             />
-          </svg>
+          </svg> 
         </div>
-        <div id="mainbar2">우리쇼핑몰</div>
+        <div id="mainbar2"><a href="index.html">우리 쇼핑몰</a></div>
         <div id="mainbar3">검색창</div>
         <div id="mainbar4">
+          <!-- 구글 장바구니 아이콘 -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             display="block"
@@ -136,38 +139,10 @@
     </div>
   </body>
     <script>
-      var products=[{
-        name: '경주여행',
-        price:100000,
-        seller:'성근',
-        imageUrl: 'image/product/Gyeongju.jpg'
-      },{
-        name:'제주여행',
-        price:150000,
-        seller:'송이',
-        imageUrl: 'image/product/jeju.jpg'
-      },{
-        name:'해운대여행',
-        price:80000,
-        seller:'재이',
-        imageUrl:'image/product/Haeundae.jpg'
-      },{
-        name:'전주여행',
-        price:50000,
-        seller:"키키",
-        imageUrl:'image/product/jeonju.jpg'
-      },{
-        name:'경복궁여행',
-        price:50000,
-        seller:"모모",
-        imageUrl:'image/product/Gyeongbokgung.jpg'
-      },{
-        name:'춘천여행',
-        price:75000,
-        seller:'코코',
-        imageUrl:'image/product/Chuncheon.jpg'
-      }];
-       let productshtml="";
+      axios.get('https://39a85c98-911e-4661-a7b7-27f201371abe.mock.pstmn.io/products')
+        .then(function(result){console.log('통신결과 : ',result); 
+        const products=result.data.products;
+        let productshtml="";
        for(var i=0;i<products.length;i++){
        let product=products[i]
         productshtml=productshtml+
@@ -184,9 +159,9 @@
            ' <span>'+product.seller+'</span>'+
          ' </div>'+
        '</div>'
-      }
-      document.querySelector("#product-list").innerHTML=productshtml;
-      
-       
-    </script>
+      };
+      document.querySelector("#product-list").innerHTML=productshtml;})
+        .catch(function(error){console.error('error 발생 :',error )});
+
+      </script>
 </html>
